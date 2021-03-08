@@ -26,6 +26,20 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Previous Installation
+
++ Nodejs 14.16.0 LTS - [Links](https://nodejs.org/en/)
++ Nestjs/cli - `$ npm i -g @nestjs/cli`
++ Angular/cli - `$ npm i -g @angular/cli`
+
+## Ordered Folders
+
++ app
+ + backend [Links](https://github.com/4l3x31s/nest-backend.git)
+ + frontend [Links](https://github.com/4l3x31s/angular-front.git)
+ + docker-compose.yaml
+ + default.conf
+
 ## Installation
 
 ```bash
