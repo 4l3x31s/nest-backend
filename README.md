@@ -26,11 +26,13 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+Sorry but I have more experience in Nodejs and Angular, that's why I did the exercise with both technologies.
+
 ## Previous Installation
 
 + Nodejs 14.16.0 LTS - [https://nodejs.org/en/](https://nodejs.org/en/)
-+ Nestjs/cli - `$ npm i -g @nestjs/cli`
-+ Angular/cli - `$ npm i -g @angular/cli`
++ Nestjs/cli - `$ sudo npm i -g @nestjs/cli`
++ Angular/cli - `$ sudo npm i -g @angular/cli`
 
 ## Ordered Folders
 
