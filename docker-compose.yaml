@@ -1,0 +1,52 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=prueba
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./database-data:/var/lib/postgresql/data/
+    networks:
+      prueba:
+        ipv4_address: 172.50.0.4
+
+  backend:
+    build: backend
+    command: npm run start:dev
+    ports:
+      - 3000:3000
+    networks:
+      prueba:
+        ipv4_address: 172.50.0.6
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/usr/src/app:rw
+      - /usr/src/app/node_modules
+  frontend:
+    image: nginx:alpine
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - db
+      - backend
+    volumes:
+      - ./frontend/dist/frontend:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      prueba:
+        ipv4_address: 172.50.0.7
+
+networks:
+  prueba:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.50.0.0/16
+          gateway: 172.50.0.1
+    
