@@ -26,11 +26,12 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-Sorry but I have more experience in Nodejs and Angular, that's why I did the exercise with both technologies.
+Sorry but I have more experience in Nodejs and Angular, that's why I did the exercise with both technologies. First you have to run docker-compose to download postgresql, then run model.sql to recreate the database. The order of the folders can be found in the **Ordered Folders** section.
 
 ## Previous Installation
 
 + Nodejs 14.16.0 LTS - [https://nodejs.org/en/](https://nodejs.org/en/)
++ Docker [https://www.docker.com/get-started](https://www.docker.com/get-started)
 + Nestjs/cli - `$ sudo npm i -g @nestjs/cli`
 + Angular/cli - `$ sudo npm i -g @angular/cli`
 
