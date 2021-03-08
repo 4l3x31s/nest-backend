@@ -9,7 +9,7 @@ import { TestModule } from './modules/test/test.module';
     TypeOrmModule.forRoot({
       name: 'default',
       type: 'postgres',
-      host: '192.168.1.4',
+      host: '172.50.0.4',
       port: 5432,
       username: 'postgres',
       password: 'postgres',
