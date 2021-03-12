@@ -23,8 +23,9 @@ export class ClaseService {
         return this._claseRepository.update({idClase: clase.idClase}, clase); 
     }
     listarClasesEstudiante(idEstudiante: number): Promise<Clase[]> {
-        return this._claseRepository.query(`select cl.* from clase cl, estudiante_clase ec
-        where ec.id_estudiante = `+idEstudiante+`
-        and cl.id_clase = ec.id_clase`);
+        return this._claseRepository.query(
+            `select cl.id_clase as idClase, cl.codigo, cl.titulo, cl.descripcion from clase cl, estudiante_clase ec
+            where ec.id_estudiante = `+idEstudiante+`
+            and cl.id_clase = ec.id_clase`);
     }
 }

@@ -22,8 +22,9 @@ export class EstudianteService {
         return this._estudianteRepostory.update({idEstudiante: estudiante.idEstudiante}, estudiante); 
     }
     listarEstudiantesClase(idClase: number): Promise<Estudiante[]> {
-        return this._estudianteRepostory.query(`select es.* from estudiante es, estudiante_clase ec
-        where ec.id_clase = `+ idClase+`
-        and es.id_estudiante = ec.id_estudiante`);
+        return this._estudianteRepostory.query(
+            `select es.* from estudiante es, estudiante_clase ec
+                where ec.id_clase = `+ idClase+`
+                and es.id_estudiante = ec.id_estudiante`);
     }
 }

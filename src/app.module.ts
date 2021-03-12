@@ -15,7 +15,7 @@ import { TestModule } from './modules/test/test.module';
       password: 'postgres',
       database: 'prueba',
       schema: 'public',
-      synchronize: false,
+      synchronize: true,
       entities: [__dirname + '/model/**/*{.ts,.js}'],
       autoLoadEntities: true,
     }),
